@@ -9,7 +9,7 @@ export const App = () => {
 	const onInputButtonClick = () => {
 		const promptValue = prompt('Введите значение');
 		if (promptValue !== null) {
-			if (promptValue.length < 3) {
+			if (promptValue.trim.length < 3) {
 				setError('Введенное значение должно содержать минимум 3 символа');
 				setValue('');
 			} else {
@@ -22,7 +22,7 @@ export const App = () => {
 	const isValueVaild = value.length >= 3;
 
 	const onAddButtonClick = () => {
-		if (value.length >= 3) {
+		if (value.trim.length >= 3) {
 			const updatedList = [
 				...list,
 				{ id: Date.now(), value: value, data: new Date() },
