@@ -22,7 +22,7 @@ export const App = () => {
 	const isValueVaild = value.length >= 3;
 
 	const onAddButtonClick = () => {
-		if (value.trim.length >= 3) {
+		if (value.trim().length >= 3) {
 			const updatedList = [
 				...list,
 				{ id: Date.now(), value: value, data: new Date() },
